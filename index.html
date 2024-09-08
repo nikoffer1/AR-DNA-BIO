@@ -10,7 +10,9 @@
 <body style="margin: 0; overflow: hidden;">
     <a-scene embedded arjs="sourceType: webcam;">
         <a-marker-camera type='pattern' url='https://raw.githubusercontent.com/nikoffer1/AR-DNA-BIO/main/marker/marker.patt'>
-            <a-box position='0 0.5 0' rotation='0 45 0' color='#4CC3D9'></a-box>
+             <a-entity 
+                obj-model="obj: url(https://raw.githubusercontent.com/nikoffer1/AR-DNA-BIO/main/models/dna-molecule.obj);">
+            </a-entity>
         </a-marker-camera>
     </a-scene>
 </body>
