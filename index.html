@@ -6,13 +6,9 @@
     <script src="https://raw.githubusercontent.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
 </head>
 <body style="margin: 0; overflow: hidden;">
-    <!-- AR.js Scene -->
     <a-scene embedded arjs="sourceType: webcam;">
-        <a-entity camera></a-entity>
         <a-marker-camera type='pattern' url='https://raw.githubusercontent.com/nikoffer1/AR-DNA-BIO/main/marker/marker.patt'>
-            <a-entity
-                obj-model="obj: url(https://raw.githubusercontent.com/nikoffer1/AR-DNA-BIO/main/models/dna-molecule.obj);">
-            </a-entity>
+            <a-box position='0 0.5 0' rotation='0 45 0' color='#4CC3D9'></a-box>
         </a-marker-camera>
     </a-scene>
 </body>
