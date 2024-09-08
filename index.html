@@ -10,13 +10,13 @@
     <!-- AR.js Scene -->
     <a-scene embedded arjs=’sourceType: webcam;’>
         <a-entity camera></a-entity>
-        <a-marker preset=’hiro’>
+        <a-marker-camera type='pattern' url='https://raw.githubusercontent.com/nikoffer1/AR-DNA-BIO/main/marker/marker.patt'>
             <a-entity> 
                 obj-model=”obj: url(/models/dna-molecule.obj); 
                 
             </a-entity>
 
-        </a-marker>
+        </a-marker-camera>
     </a-scene>
 </body>
 </html>
