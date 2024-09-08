@@ -4,7 +4,6 @@
     <title>DNA AR</title>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
-
 </head>
 <body style="margin: 0; overflow: hidden;">
     <!-- AR.js Scene -->
@@ -12,10 +11,8 @@
         <a-entity camera></a-entity>
         <a-marker-camera type='pattern' url='https://raw.githubusercontent.com/nikoffer1/AR-DNA-BIO/main/marker/marker.patt'>
             <a-entity
-                obj-model="obj: url(https://raw.githubusercontent.com/nikoffer1/AR-DNA-BIO/main/models/dna-molecule.obj)";>
-                
+                obj-model="obj: url(/models/dna-molecule.obj);">
             </a-entity>
-
         </a-marker-camera>
     </a-scene>
 </body>
