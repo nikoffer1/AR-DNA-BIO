@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DNA AR</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/ar.js/1.7.7/aframe/build/aframe-ar.min.js"></script>
+</head>
+<body style="margin: 0; overflow: hidden;">
+    <!-- AR.js Scene -->
+    <a-scene embedded arjs>
+        <!-- Marker -->
+        <a-marker type="pattern" url="marker/marker.patt">
+            <!-- DNA Model -->
+            <a-entity gltf-model="\models\dna-model.glb" scale="0.1 0.1 0.1"></a-entity>
+        </a-marker>
+        <a-entity camera></a-entity>
+    </a-scene>
+</body>
+</html>
