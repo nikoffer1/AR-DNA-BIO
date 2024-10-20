@@ -13,6 +13,26 @@
             justify-content: center;
             height: 100vh;
             margin: 0;
+            position: relative;
+        }
+        .image-container {
+            position: absolute;
+            height: 100%;
+            width: 20%;
+            background-color: #e0e0e0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .image-left {
+            left: 0;
+        }
+        .image-right {
+            right: 0;
+        }
+        .image-container img {
+            max-width: 80%;
+            height: auto;
         }
         .login-container {
             background-color: #ffffff;
@@ -21,6 +41,7 @@
             border-radius: 10px;
             width: 300px;
             text-align: center;
+            z-index: 1;
         }
         .login-container h2 {
             margin-bottom: 20px;
@@ -53,16 +74,48 @@
     </style>
 </head>
 <body>
+    <!-- Left Image -->
+    <div class="image-container image-left">
+        <img src="https://via.placeholder.com/150" alt="Security Illustration">
+    </div>
+
+    <!-- Login Form -->
     <div class="login-container">
         <h2>MyBank Login</h2>
-        <form>
-            <input type="text" placeholder="Username or Email" required><br>
-            <input type="password" placeholder="Password" required><br>
+        <form id="login-form">
+            <input type="text" id="username" placeholder="Username or Email" required><br>
+            <input type="password" id="password" placeholder="Password" required><br>
             <button type="submit" class="login-button">Login</button>
         </form>
         <div class="warning">
-            <p>This is a demo site! Do not enter real credentials.</p>
+            <p>PRECIS NUI SCAM! STARIY BOG.</p>
         </div>
     </div>
+
+    <!-- Right Image -->
+    <div class="image-container image-right">
+        <img src="https://via.placeholder.com/150" alt="Hacker Illustration">
+    </div>
+
+    <script>
+        // Save user input to a text file (only for demo purposes)
+        document.getElementById('login-form').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Get the input values
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Format the data
+            const data = `Username: ${username}\nPassword: ${password}\n`;
+
+            // Create a blob and save it as a .txt file
+            const blob = new Blob([data], { type: 'text/plain' });
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = 'credentials.txt';
+            link.click();
+        });
+    </script>
 </body>
 </html>
